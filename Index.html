@@ -8,9 +8,9 @@
 
 @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-.card { background: white; padding: 30px 24px 40px; border-radius: 22px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.2); width: min(92vw, 380px); position: relative; overflow: hidden; z-index: 2; }
+.card { background: white; padding: 30px 24px 30px; border-radius: 22px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.2); width: min(92vw, 380px); position: relative; overflow: hidden; z-index: 2; }
 
-h1 { margin-bottom: 30px; font-size: clamp(20px, 5vw, 26px); min-height: 60px; }
+h1 { margin-bottom: 16px; font-size: clamp(20px, 5vw, 26px); min-height: 60px; }
 
 .buttons { position: relative; height: 150px; }
 
@@ -24,6 +24,8 @@ button { padding: 14px 28px; border: none; border-radius: 30px; font-size: 18px;
 
 #result { display: none; }
 
+/* GIF styling — kept compact so card does not expand */ .love-gif { width: 100%; max-width: 240px; max-height: 180px; object-fit: contain; border-radius: 14px; margin: 6px auto 0; display: block; }
+
 /* Floating background hearts */ .bg-heart { position: fixed; bottom: -20px; font-size: 18px; animation: floatUp linear forwards; opacity: 0.7; pointer-events: none; z-index: 1; }
 
 @keyframes floatUp { to { transform: translateY(-110vh); opacity: 0; } }
@@ -32,7 +34,7 @@ button { padding: 14px 28px; border: none; border-radius: 30px; font-size: 18px;
 
 @keyframes fall { to { transform: translateY(110vh) rotate(720deg); opacity: 0.9; } }
 
-@media (max-width: 480px) { .buttons { height: 170px; } #yesBtn { left: 15%; } #noBtn { right: 15%; } } </style>
+@media (max-width: 480px) { .buttons { height: 170px; } #yesBtn { left: 15%; } #noBtn { right: 15%; } .love-gif { max-height: 160px; } } </style>
 
 </head>
 <body><!-- Background music: keep music.mp3 in repo --><audio id="bgMusic" src="music.mp3" loop></audio>
@@ -44,8 +46,7 @@ button { padding: 14px 28px; border: none; border-radius: 30px; font-size: 18px;
     <button id="noBtn">NO</button>
   </div>
 </div><div class="card" id="result">
-  <h1>YAY... Best Decision Ever, Avant!!! 🎉❤️</h1>
-  <img src="love.gif" alt="I love you" class="love-gif" />
+  <h1>YAY... Best Decision Ever, Avant!!! 🎉❤️</h1>  <!-- GIF now stays compact under heading -->  <img src="love.gif" alt="I love you" class="love-gif" />
 </div><script>
   const noBtn = document.getElementById("noBtn");
   const yesBtn = document.getElementById("yesBtn");
