@@ -24,7 +24,7 @@ button { padding: 14px 28px; border: none; border-radius: 30px; font-size: 18px;
 
 #result { display: none; }
 
-/* GIF styling — kept compact so card does not expand */ .love-gif { width: 100%; max-width: 240px; max-height: 180px; object-fit: contain; border-radius: 14px; margin: 6px auto 0; display: block; }
+/* GIF styling — kept compact so card does not expand */ .love-gif { width: 100%; max-width: 100px; max-height: 75px; object-fit: contain; border-radius: 14px; margin: 6px auto 0; display: block; }
 
 /* Floating background hearts */ .bg-heart { position: fixed; bottom: -20px; font-size: 18px; animation: floatUp linear forwards; opacity: 0.7; pointer-events: none; z-index: 1; }
 
@@ -46,14 +46,14 @@ button { padding: 14px 28px; border: none; border-radius: 30px; font-size: 18px;
     <button id="noBtn">NO</button>
   </div>
 </div><div class="card" id="result">
-  <h1>YAY... Best Decision Ever, Avant!!! 🎉❤️</h1>  <!-- GIF now stays compact under heading -->  <img src="love.gif" alt="I love you" class="love-gif" />
+  <h1>YAY... Best Decision Ever, Avantika!!! 🎉❤️</h1>  <!-- GIF now stays compact under heading -->  <img src="love.gif" alt="I love you" class="love-gif" />
 </div><script>
   const noBtn = document.getElementById("noBtn");
   const yesBtn = document.getElementById("yesBtn");
   const area = document.getElementById("buttonArea");
   const music = document.getElementById("bgMusic");
 
-  const question = "Avant, Will You Be My Valentine? ❤️";
+  const question = "Avantika, Will You Be My Valentine? ❤️";
   const textEl = document.getElementById("questionText");
 
   /* Typing animation */
